@@ -1,4 +1,16 @@
 spring:
+  liquibase:
+    change-log: db/changelog/db.changelog-master.xml
+
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+    jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   config:
     activate:
       on-profile: test
@@ -27,3 +39,7 @@ enabled: true
 servers:
   - www.abc.com
   - www.xyz.com
+datasource:
+  password: password
+  url: jdbc:h2:dev
+  username: SA
