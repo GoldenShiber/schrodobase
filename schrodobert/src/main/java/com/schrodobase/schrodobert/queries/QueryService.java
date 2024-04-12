@@ -8,9 +8,10 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class QueryService {
     @PersistenceContext
     private EntityManager entityManager;
